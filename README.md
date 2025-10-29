@@ -35,18 +35,6 @@ Welcome to my personal portfolio website! This project showcases my journey as a
 
 ---
 
-## 🏆 Projects
-
-### 🎶 [Hatsune Miku Fanpage](https://hatsune-miku-xoxo.netlify.app/)
-💖 _A tribute page to Hatsune Miku, my first anime love!_  
-🛠️ **Built with:** HTML, Tailwind CSS, JavaScript  
-
-### 🏋️ [BMI Calculator](https://body-mass-index-c.netlify.app/)
-⚖️ _A simple tool to calculate your Body Mass Index (BMI) and suggest a healthy lifestyle._  
-🛠️ **Built with:** HTML, Tailwind CSS, JavaScript  
-
----
-
 ## 🚀 Installation & Usage
 
 1. Clone the repository  
