@@ -124,7 +124,7 @@ function handleout(){
 }
 
 
-// Eye Tracker Animation
+// EYE TRACKER ANIMATION
 const config = {
     maxEyeMovementX: 4,
     maxEyeMovementY: 2,
@@ -210,10 +210,43 @@ const config = {
     rightEye.style.transform = `translate(${rightEyeMovement.x}px, ${rightEyeMovement.y}px)`;
   }
 
-  // Add event listener
-  document.addEventListener('mousemove', handleMouseMove);
+    // Add event listener
+    document.addEventListener('mousemove', handleMouseMove);
 
-  // Hide demo cursor after 3 seconds
-  setTimeout(() => {
-    demoCursor.style.opacity = '0';
-  }, 3000);
+    // Hide demo cursor after 3 seconds
+    setTimeout(() => {
+      demoCursor.style.opacity = '0';
+    }, 3000);
+
+  // FIREWORKS EFFECT ON CURSOR
+  document.addEventListener("mousemove", (e) => {
+    createParticle(e.pageX, e.pageY);
+  });
+  
+  function createParticle(x, y) {
+    const particle = document.createElement("div");
+    particle.className =
+      "absolute w-1 h-1 rounded-full bg-pink-300 opacity-100 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none transition-all duration-700 ease-out";
+    
+    particle.style.left = x + "px";
+    particle.style.top = y + "px";
+    
+    // Add a random scale & blur for variation
+    const scale = 0.5 + Math.random() * 1.5;
+    particle.style.transform += ` scale(${scale})`;
+    particle.style.filter = `blur(${Math.random() * 4}px)`;
+    
+    document.body.appendChild(particle);
+  
+    // Animate fade + upward motion
+    setTimeout(() => {
+      particle.style.opacity = "0";
+      particle.style.transform += ` translateY(40px)`;
+    }, 50);
+  
+    // Remove after animation ends
+    setTimeout(() => {
+      particle.remove();
+    }, 700);
+  }
+  
