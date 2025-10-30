@@ -27,8 +27,8 @@
 </head>
 
 <body class="bg-pink-50 w-full box-content">
-    <header class="flex lg:sticky lg:top-0 flex-row w-full">
-        <nav class="flex w-full lg:items-center justify-between bg-pink-50">
+    <header class=" bg-pink-50 flex lg:sticky lg:top-0 flex-row w-full z-50 ">
+        <nav class="flex w-full lg:items-center justify-between max-w-7xl mx-auto">
             <div class="w-full md:w-5/6 py-3 px-2 lg:py-2 lg:px-3">
                 <img class="w-8 md:w-[40px]" src="assets/logo.png" alt="logo">
             </div>
@@ -41,14 +41,14 @@
             </ul>
 
             <!-- Hamburger Menu Button -->
-            <div id="hamburger" class="block absolute z-20 top-3 right-1 lg:hidden transition-transform duration-300 cursor-pointer">
+            <div id="hamburger" class="block absolute z-50 top-3 right-1 lg:hidden transition-transform duration-300 cursor-pointer">
                 <button id="menu-btn" class="text-pink-900 focus:outline-none">
                     <i id="menu-icon" class="fa-solid fa-bars text-2xl"></i>
                 </button>
             </div>
 
             <!-- Mobile Menu (Hidden by Default) -->
-            <div id="mobile-menu" class="z-10 translate-x-full flex fixed flex-col w-full h-screen justify-center bg-red-900 text-center transition delay-150 duration-300 ease-in lg:hidden shadow-md">
+            <div id="mobile-menu" class="z-40 translate-x-full flex fixed flex-col w-full h-screen justify-center bg-red-900 text-center transition delay-150 duration-300 ease-in lg:hidden shadow-md">
                 <a onclick="handleout()" href="#" class="text-pink-50 hover:text-pink-800 transition-all duration-200">About</a>
                 <a onclick="handleout()" href="#education" class="text-pink-50 hover:text-pink-800 transition-all duration-200">Education</a>
                 <a onclick="handleout()" href="#skills" class="text-pink-50 hover:text-pink-800 transition-all duration-200">Skills</a>
@@ -61,7 +61,7 @@
 
     <main>
         <!-- Opening -->
-        <section class="flex flex-col lg:flex-row pl-4 md:pl-44 h-screen justify-center md:justify-start">
+        <section class="flex flex-col lg:flex-row pl-4 md:pl-44 h-screen justify-center md:justify-start max-w-7xl mx-auto">
             <div class="flex order-2 md:order-1 flex-col self-center w-full lg:w-3/5">
                 <h1 class="uppercase font-extrabold text-black text-base md:text-3xl tracking-[.20em] py-2">Hi! I'm <b class="text-pink-700">Herlinda Apriani</b></h1>
 
@@ -97,34 +97,37 @@
         </section>
 
         <!-- education -->
-        <section id="education" class="flex flex-col w-full h-screen bg-red-950 text-pink-100 justify-center text-center">
-            <div class="py-1 md:py-8">
-                <h2 class="uppercase font-bold md:font-extrabold text-pink-50 text-lg md:text-3xl">Education</h2>
+        <section id="education" class="flex flex-col w-full h-screen bg-red-950 text-pink-100 justify-center">
+            <div class="py-1 md:py-8 max-w-7xl mx-auto">
+                <h2 class="uppercase font-bold md:font-extrabold text-pink-50 text-lg md:text-3xl text-center">Education</h2>
             </div>
-            <div class="w-5/6 md:w-full flex flex-col md:flex-row self-center justify-evenly">
-                <div class="flex flex-col m-1 md:m-0 p-1 md:p-16 rounded-lg text-black bg-pink-50 hover:drop-shadow-[0_10px_10px_rgba(246,232,234,1)]">
-                    <h3 class="py-1 md:py-3 font-semibold text-sm md:text-xl">Progate Indonesia</h3>
-                    <img class="w-40 self-center md:w-72 lg:w-80 mb-0 md:mb-2 rounded-lg transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110" src="assets/proget-anim.png" alt="Progate Indonesia">
+            <div class="w-5/6 md:w-full flex flex-col md:flex-row self-center space-x-2 justify-center max-w-7xl mx-auto">
+                <div class="w-1/4 flex flex-col m-1 md:m-0 p-1 md:p-5 rounded-lg text-red-50 border bg-red-950 hover:drop-shadow-[0_10px_10px_rgba(246,232,234,1)] -rotate-6 hover:rotate-0 transition delay-100 duration-300 ease-in-out">
+                    <img class="w-40 self-center md:w-72 lg:w-80 mb-0 md:mb-2 rounded-lg" src="assets/proget-anim.png" alt="Progate Indonesia">
+                    <h3 class="py-1 md:py-3 font-bold text-sm md:text-xl">Progate Indonesia</h3>
                     <p class="text-xs md:text-base">Frontend Developer</p>
-                    <p class="text-pink-800 text-xs md:text-base font-semibold">2020</p>
+                    <p class="text-pink-400 text-xs md:text-base font-semibold">2020</p>
+                    <p class="text-xs md:text-base py-3">Learned the core concepts of web development, focusing on how code shapes user experiences. Through HTML, CSS, and JavaScript, I built a strong foundation in frontend fundamentals and web structure.</p>
                 </div>
-                <div class="flex flex-col m-1 md:m-0 p-1 md:p-16 rounded-lg text-black bg-pink-50 hover:drop-shadow-[0_10px_10px_rgba(246,232,234,1)]">
-                    <h3 class="py-1 md:py-3 font-semibold text-sm md:text-xl">Universitas Gadjah Mada</h3>
-                    <img class="w-40 self-center md:w-72 lg:w-80 mb-0 md:mb-2 rounded-lg transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110" src="assets/ugm.png" alt="UGM">
+                <div class="flex w-1/4 flex-col m-1 md:m-0 p-1 md:p-5 rounded-lg text-red-50 border bg-red-950 hover:drop-shadow-[0_10px_10px_rgba(246,232,234,1)] -rotate-2 hover:rotate-0 transition delay-100 duration-300 ease-in-out">
+                    <img class="w-40 self-center md:w-72 lg:w-80 mb-0 md:mb-2 rounded-lg" src="assets/ugm.png" alt="UGM">
+                    <h3 class="py-1 md:py-3 font-bold text-sm md:text-xl">Universitas Gadjah Mada</h3>
                     <p class="text-xs md:text-base">Bachelor of Applied Linguistics</p>
-                    <p class="text-pink-800 text-xs md:text-base font-semibold">2023</p>
+                    <p class="text-pink-400 text-xs md:text-base font-semibold">2023</p>
+                    <p class="text-xs md:text-base py-3">Explored how to connect technology with people through communication and marketing. My studies covered public relations, digital marketing, copywriting, and English for business purposes to craft impactful messages.</p>
                 </div>
-                <div class="flex flex-col m-1 md:m-0 p-1 md:p-16 rounded-lg text-black bg-pink-50 hover:drop-shadow-[0_10px_10px_rgba(246,232,234,1)]">
-                    <h3 class="py-1 md:py-3 font-semibold text-sm md:text-xl">RevoU</h3>
-                    <img class="w-40 self-center md:w-72 lg:w-80 mb-0 md:mb-2 rounded-lg transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110" src="assets/revou-anime.png" alt="revou">
+                <div class="flex w-1/4 flex-col m-1 md:m-0 p-1 md:p-5 rounded-lg text-red-50 border bg-red-950 hover:drop-shadow-[0_10px_10px_rgba(246,232,234,1)] rotate-6 hover:rotate-0 transition delay-100 duration-300 ease-in-out">
+                    <img class="w-40 self-center md:w-72 lg:w-80 mb-0 md:mb-2 rounded-lg" src="assets/revou-anime.png" alt="revou">
+                    <h3 class="py-1 md:py-3 font-bold text-sm md:text-xl">RevoU</h3>
                     <p class="text-xs md:text-base">Full-stack Software Engineering</p>
-                    <p class="text-pink-800 text-xs md:text-base font-semibold">2025</p>
+                    <p class="text-pink-400 text-xs md:text-base font-semibold">2025</p>
+                    <p class="text-xs md:text-base py-3">Developed skills in both frontend and backend programming to create complete web applications. I also gained hands-on experience with databases, unit testing, and web performance optimization for reliable and efficient sites.</p>
                 </div>
             </div>
         </section>
 
         <!-- Skills -->
-        <section id="skills" class="w-full h-screen text-center place-content-center">
+        <section id="skills" class="h-screen text-center place-content-center max-w-7xl mx-auto">
             <div class="py-1 md:py-8">
                 <h2 class="uppercase font-bold md:font-extrabold text-pink-950 text-lg md:text-3xl">Skills</h2>
             </div>
@@ -166,7 +169,7 @@
 
         <!-- Projects -->
         <section id="projects" class="w-full h-screen flex flex-col bg-red-950">
-            <div class="flex flex-col place-items-center justify-center w-full h-full">
+            <div class="flex flex-col place-items-center justify-center max-w-7xl mx-auto pt-2 md:pt-20">
                 <h2 class="uppercase font-bold lg:font-extrabold text-pink-50 text-lg lg:text-3xl">Projects</h2>          
                 <div class="flex flex-col lg:flex-row w-4/5 lg:w-3/4 items-center lg:items-start bg-pink-50 text-red-950 p-3 lg:p-6 m-1 lg:m-5 rounded-md drop-shadow-sm">
                     <img class="w-48 md:w-96 rounded-md" src="assets/fuwa.png" alt="project1">
@@ -216,14 +219,13 @@
         </section>
 
         <!-- Contact Me -->
-        <section id="contact" class="container flex flex-col md:flex-row py-8 md:py-20 h-screen">
+        <section id="contact" class="container flex flex-col md:flex-row py-8 md:py-20 h-screen max-w-7xl mx-auto">
             <div class="flex flex-col w-5/6 md:w-2/5 max-h-max mt-1 md:mt-6 mx-auto transition ease-in p-2 md:p-6 self-center">
                 <div class="w-full bg-white shadow rounded-lg text-center self-center justify-center py-6">
                     <h2 class="font-bold md:font-extrabold text-pink-950 text-base md:text-2xl">Contact Me</h2>
-                    <p class="text-sm md:text-lg mt-0 lg:mt-4"><b class="text-red-900">Got an idea in mind?</b> I’m open to collaborating and discussing future web development ventures—<b class="text-red-900">let’s connect!</b></p>
+                    <p class="text-sm md:text-lg mt-0 lg:mt-4"><b class="text-red-900">Got an idea in mind?</b> I’m open to collaborating and discussing future web development—<b class="text-red-900">let’s connect!</b></p>
                     <ul class="text-xs md:text-base justify-items-start place-self-center pt-2 md:pt-4">
                         <li><i class="fa-solid fa-envelope  text-pink-900 mr-4"></i>herlindaapr@gmail.com</li>
-                        <li><i class="fa-solid fa-phone  text-pink-900 mr-4"></i>+62 813 904 88 967</li>
                         <li><i class="fa-solid fa-location-dot text-pink-900 mr-4"></i>Yogyakarta, Indonesia</li>
                     </ul>
                 </div>
@@ -261,7 +263,7 @@
                                 />
                                 
                                 <!-- Left eye container -->
-                                <div class="absolute w-full h-full flex items-center justify-center z-50" style="left: -1%; bottom: 0%;">
+                                <div class="absolute w-full h-full flex items-center justify-center z-20" style="left: -1%; bottom: 0%;">
                                 <img 
                                     id="leftEye"
                                     src="assets/right-eye.png"
@@ -272,7 +274,7 @@
                                 </div>
                                 
                                 <!-- Right eye container -->
-                                <div class="absolute w-full h-full flex items-center justify-center z-50" style="left: -16%; top: -1%;">
+                                <div class="absolute w-full h-full flex items-center justify-center z-20" style="left: -16%; top: -1%;">
                                 <img 
                                     id="rightEye"
                                     src="assets/right-eye.png"
