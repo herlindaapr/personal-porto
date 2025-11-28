@@ -249,4 +249,69 @@
           particle.remove();
         }, 700);
       }
+
+// PROJECTS CAROUSEL FUNCTIONALITY
+      let currentProjectIndex = 0;
+      const projectsPerPage = 2;
+      
+      function initProjectsCarousel() {
+        const projectItems = document.querySelectorAll('[data-project-card]');
+        const prevBtn = document.getElementById('prev-projects');
+        const nextBtn = document.getElementById('next-projects');
+        
+        if (projectItems.length === 0) return;
+        
+        function showProjects() {
+          projectItems.forEach((item, index) => {
+            if (index >= currentProjectIndex && index < currentProjectIndex + projectsPerPage) {
+              item.style.display = 'flex';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+          
+          const maxIndex = Math.max(0, projectItems.length - projectsPerPage);
+          const isAtStart = currentProjectIndex === 0;
+          const isAtEnd = currentProjectIndex >= maxIndex;
+          
+          toggleButton(prevBtn, isAtStart);
+          toggleButton(nextBtn, isAtEnd);
+        }
+        
+        function nextProjects() {
+          const maxIndex = Math.max(0, projectItems.length - projectsPerPage);
+          if (currentProjectIndex < maxIndex) {
+            currentProjectIndex += projectsPerPage;
+            showProjects();
+          }
+        }
+        
+        function prevProjects() {
+          if (currentProjectIndex > 0) {
+            currentProjectIndex = Math.max(0, currentProjectIndex - projectsPerPage);
+            showProjects();
+          }
+        }
+        
+        if (prevBtn) {
+          prevBtn.addEventListener('click', prevProjects);
+        }
+        if (nextBtn) {
+          nextBtn.addEventListener('click', nextProjects);
+        }
+        
+        showProjects();
+      }
+      
+      function toggleButton(buttonEl, shouldHide) {
+        if (!buttonEl) return;
+        buttonEl.disabled = shouldHide;
+        buttonEl.style.visibility = shouldHide ? 'hidden' : 'visible';
+      }
+      
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initProjectsCarousel);
+      } else {
+        initProjectsCarousel();
+      }
   
