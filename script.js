@@ -256,8 +256,8 @@
       
       function initProjectsCarousel() {
         const projectItems = document.querySelectorAll('[data-project-card]');
-        const prevBtn = document.getElementById('prev-projects');
-        const nextBtn = document.getElementById('next-projects');
+        const prevBtns = document.querySelectorAll('.btn-prev-projects');
+        const nextBtns = document.querySelectorAll('.btn-next-projects');
         
         if (projectItems.length === 0) return;
         
@@ -274,8 +274,10 @@
           const isAtStart = currentProjectIndex === 0;
           const isAtEnd = currentProjectIndex >= maxIndex;
           
-          toggleButton(prevBtn, isAtStart);
-          toggleButton(nextBtn, isAtEnd);
+          // Toggle all prev buttons (mobile and desktop)
+          prevBtns.forEach(btn => toggleButton(btn, isAtStart));
+          // Toggle all next buttons (mobile and desktop)
+          nextBtns.forEach(btn => toggleButton(btn, isAtEnd));
         }
         
         function nextProjects() {
@@ -293,12 +295,19 @@
           }
         }
         
-        if (prevBtn) {
-          prevBtn.addEventListener('click', prevProjects);
-        }
-        if (nextBtn) {
-          nextBtn.addEventListener('click', nextProjects);
-        }
+        // Add event listeners to all prev buttons (mobile and desktop)
+        prevBtns.forEach(btn => {
+          if (btn) {
+            btn.addEventListener('click', prevProjects);
+          }
+        });
+        
+        // Add event listeners to all next buttons (mobile and desktop)
+        nextBtns.forEach(btn => {
+          if (btn) {
+            btn.addEventListener('click', nextProjects);
+          }
+        });
         
         showProjects();
       }

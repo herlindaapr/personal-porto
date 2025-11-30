@@ -172,7 +172,7 @@
             <div class="flex flex-col place-items-center justify-center max-w-7xl mx-auto pt-20 md:pt-20">
                 <h2 class="uppercase font-bold lg:font-extrabold text-pink-50 text-lg lg:text-3xl">Projects</h2>          
                 <div class="relative flex flex-row items-center justify-center w-full">
-                    <button id="prev-projects" type="button" aria-label="Previous projects" class="absolute left-20 z-10 text-pink-50 text-2xl"><i class="fa-solid fa-chevron-left fa-2x hover:scale-110 transition-all duration-300 ease-in-out"></i></button>
+                    <button id="prev-projects-desktop" type="button" aria-label="Previous projects" class="btn-prev-projects hidden md:block absolute left-20 z-10 text-pink-50 text-2xl"><i class="fa-solid fa-chevron-left fa-2x hover:scale-110 transition-all duration-300 ease-in-out"></i></button>
                     <div class="flex flex-col items-center w-full">
                         
                         <!-- Project 1 -->
@@ -269,7 +269,11 @@
                             </div>
                         </div>
                     </div>
-                    <button id="next-projects" type="button" aria-label="Next projects" class="absolute right-20 z-10 text-pink-50 text-2xl hover:scale-110 transition-all duration-300 ease-in-out"><i class="fa-solid fa-chevron-right fa-2x"></i></button>
+                    <button id="next-projects-desktop" type="button" aria-label="Next projects" class="btn-next-projects hidden md:block absolute right-20 z-10 text-pink-50 text-2xl hover:scale-110 transition-all duration-300 ease-in-out"><i class="fa-solid fa-chevron-right fa-2x"></i></button>
+                </div>
+                <div class="flex flex-row justify-center space-x-4 md:hidden py-4">
+                    <button id="prev-projects-mobile" type="button" aria-label="Previous projects" class="btn-prev-projects block z-10 text-pink-50 text-sm hover:scale-110 transition-all duration-300 ease-in-out"><i class="fa-solid fa-chevron-left fa-2x"></i></button>
+                    <button id="next-projects-mobile" type="button" aria-label="Next projects" class="btn-next-projects block z-10 text-pink-50 text-sm hover:scale-110 transition-all duration-300 ease-in-out"><i class="fa-solid fa-chevron-right fa-2x"></i></button>
                 </div>
             </div>
         </section>
@@ -293,7 +297,6 @@
                         <a href="https://www.linkedin.com/in/herlindaapr"><i class="fab fa-linkedin fa-lg text-base md:text-xl lg:text-3xl"></i></a>
                         <a href="https://www.instagram.com/herlindaapr"><i class="fab fa-instagram fa-lg text-base md:text-xl lg:text-3xl"></i></a>
                         <a href="https://wa.me/6281390488967"><i class="fa-brands fa-whatsapp text-base md:text-xl lg:text-3xl"></i></a>
-
                     </div>
                 </div>
             </div>
